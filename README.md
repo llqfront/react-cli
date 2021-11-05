@@ -4,9 +4,16 @@ react-typescript-router-mobx-redux-hook
 #### step1
 ```cmd
 eg:
-mv react-cli/tpl react-cli/projectName && rm -rf react-cli
+mv react-cli/tpl react-cli/projectName
+
 eg
-mv react-cli/tpl react-cli/candy-react && rm -rf react-cli
+cd react-cli
+改名
+mv tpl candy-react
+移动
+mv tpl ../
+cd ..
+rm -rf react-cli
 ```
 
 #### step2
