@@ -118,6 +118,7 @@ ok后
 ```cmd
 yarn add node-sass@npm:dart-sass
 yarn add dart-sass
+yarn add npm-run-all
 ```
 
 ##### 修改package.json(替换 script 代码块 换成以下代码)
@@ -276,6 +277,7 @@ vue react 前端模拟路由  上线后其他页面刷新后404
 ```cmd
 1、安装包
 yarn add @types/react-router-dom;
+yarn add react-router-dom@^5.3.0
 react-router 分native 和 web 端
 直接使用 web端
 ```

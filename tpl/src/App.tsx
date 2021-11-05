@@ -1,6 +1,7 @@
 import React , { Component, Suspense, lazy } from 'react';
-import {Switch,Redirect,Route} from 'react-router-dom';
+import {Redirect,Switch,Route} from 'react-router-dom';
 const Home = lazy(() => import('./views/Home'));
+const Test = lazy(() => import('./views/Test'));
 
 class App extends Component {
     render(){
@@ -8,6 +9,7 @@ class App extends Component {
             <Suspense fallback={<div>Loading...</div>}>
                 <Switch>
                     <Route exact path="/" component={Home} />
+                    <Route exact path="/test" component={Test} />
                     <Redirect to="/"/>
                 </Switch>
             </Suspense>
