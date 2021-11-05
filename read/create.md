@@ -80,7 +80,7 @@ PS:
 go on...
 
 ctrl+c 后继续操作
-##### 项目 sass（scss）安装
+##### 项目 sass（scss）安装   或使用 以下dart-sass方式，选一个就行
 ```cmd
 yarn add node-sass-chokidar
 yarn add npm-run-all
@@ -112,6 +112,25 @@ ok后
         "build": "npm-run-all build-css build-js",
         "test": "node scripts/test.js --env=jsdom"
 },
+```
+
+##### 项目 sass（scss）安装
+```cmd
+yarn add node-sass@npm:dart-sass
+yarn add dart-sass
+```
+
+##### 修改package.json(替换 script 代码块 换成以下代码)
+```json
+"scripts": {
+    "build-css": "dart-sass src/",
+    "watch-css": "npm run build-css && dart-sass src/ --watch",
+    "start-js": "node scripts/start.js",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "node scripts/build.js",
+    "build": "npm-run-all build-css build-js",
+    "test": "node scripts/test.js --env=jsdom"
+  },
 ```
 ##### yarn build 打包注意事项
 ```html
@@ -323,23 +342,24 @@ reportWebVitals();
 
 ##### 改造App.tsx
 ```tsx
-import React, { Component } from 'react';
-import { withRouter,NavLink,Switch,Redirect,Route} from 'react-router-dom';
-import Home from './views/Home';
-import Test from './views/Test';
+import React , { Component, Suspense, lazy } from 'react';
+import {Switch,Redirect,Route} from 'react-router-dom';
+const Home = lazy(() => import('./views/Home'));
 
 class App extends Component {
     render(){
         return(
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/test" component={Test} />
-                <Redirect to="/"/>
-            </Switch>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Redirect to="/"/>
+                </Switch>
+            </Suspense>
         )
     }
 }
 export default App;
+
 
 ```
 

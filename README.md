@@ -14,6 +14,8 @@ mv react-cli/tpl react-cli/candy-react && rm -rf react-cli
 ```cmd
 node -v
 v14.15.3
+yarn config get registry
+yarn config set registry http://registry.npm.taobao.org/
 ```
 
 #### step3
