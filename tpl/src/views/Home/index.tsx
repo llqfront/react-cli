@@ -2,27 +2,7 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import Header from '@/components/Header';
 class View extends Component {
-    getPdd(pageNum=1,pageSize=10){
-        Axios.get(
-            '/home/mediareports',
-            {
-                params:{
-                    page_number:pageNum,
-                    page_size:pageSize,
-                }
-            }
-        ).then((res)=>{
-            console.log(res.data)
-            if(res.data.code===200){
-                // 成功
-                this.setState({
-                    lists:res.data.data
-                })
-            }
-        })
-    }
     componentDidMount(){
-        this.getPdd()
     }
     test(e:any,test:string){
         console.log(e)

@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
+    "@loadable/component": "^5.15.0",
+    "@loadable/server": "^5.15.1",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
     "@svgr/webpack": "5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -163,5 +165,9 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "@loadable/babel-plugin": "^5.13.2",
+    "@loadable/webpack-plugin": "^5.15.1"
   }
 }
