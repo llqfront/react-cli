@@ -1,6 +1,6 @@
 import React , { Component } from 'react';
 import { connect } from 'react-redux';
-import {AddActions} from '@/stores/Actions.ts';
+import {actionsAdd} from '@/stores/Actions.ts';
 import { withRouter,NavLink,Switch,Redirect,Route} from 'react-router-dom';
 import Item from './item.jsx';
 class View extends Component {
@@ -10,7 +10,7 @@ class View extends Component {
     onAddFn(){
         const {dispatch,addList} = this.props;
         console.log(addList.length)
-        dispatch(AddActions.add(addList.length))
+        dispatch(actionsAdd.add(addList.length))
     }
     lists(){
         const { addList } = this.props;
@@ -63,9 +63,9 @@ function mapStateToProps(state) {
 //     // {
 //     //     type:'ADD_TODO'
 //     // }
-//     // dispatch(AddActions.add())
+//     // dispatch(actionsAdd.add())
 //     return {
-//         onAddFn:()=>dispatch(AddActions.add())
+//         onAddFn:()=>dispatch(actionsAdd.add())
 //     }
 // };
 export default connect(mapStateToProps,null)(View);

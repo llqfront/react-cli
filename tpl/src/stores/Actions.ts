@@ -1,26 +1,9 @@
-import * as AddActions from './Add/Actions.ts';
-import fs from 'fs';
+import * as actionsAdd from './Add/Actions.ts';
+// import * as actionsApp from './App/Actions.ts';
+// import * as actionsEnter from './Enter/Actions.ts';
 
-
-console.log(fs)
-
-// let components = []
-// const files = fs.readdirSync('@/store/')
-// files.forEach(function (item, index) {
-//     let stat = fs.lstatSync("./" + item)
-//     if (stat.isDirectory() === true) {
-//       components.push(item)
-//     }
-// })
-
-console.log(components);
-// let components = []
-// files.forEach(function (item, index) {
-//     let stat = fs.lstatSync("./" + item)
-//     if (stat.isDirectory() === true) {
-//       components.push(item)
-//     }
-// })
 export {
-    AddActions
+    actionsAdd,
+    // actionsApp,
+    // actionsEnter
 }
