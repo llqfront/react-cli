@@ -1,8 +1,7 @@
 import React , { Component } from 'react';
 import {connect} from 'react-redux';
 
-import {actions} from './_index.js';
-
+import {AddActions} from '@/stores/Actions.ts';
 class View extends Component {
     // changeName(){
     //
@@ -34,19 +33,19 @@ function mapStateToProps(state) {
     //     del:[]
     // }
     return {
-        addList:state.add
+        addList:state.addReducer
     }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
-    // ownProps 父组件有任意参数 
+    // ownProps 父组件有任意参数
     // const {name} = ownProps;
     // this.props.name
     // {
     //     type:'ADD_TODO'
     // }
-    // dispatch(actions.add())
+    // dispatch(AddActions.add())
     return {
-        onAddFn:()=>dispatch(actions.add())
+        onAddFn:()=>dispatch(AddActions.add())
     }
 };
 export default connect(mapStateToProps,mapDispatchToProps)(View);

@@ -1,10 +1,12 @@
 import {createStore, combineReducers,applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import {reducer as addReducer} from '@/views/Action/_index.js';
-// import {reducer as testReducer} from '../views/Test/_index.js';
-// import {reducer as delReducer} from '../views/Test/_index.js';
+import addReducer from './Add/Reducer.js';
+// import {reducer as testReducer} from '@/Test/Reducer.js';
+// import {reducer as delReducer} from '@/Del/Reducer.js';
 const reducer = combineReducers({
-    add:addReducer,
+    addReducer,
+    // testReducer,
+    // delReducer
     // testList:testReducer,
     // remove:removeReducer,
     // edit:editReducer,

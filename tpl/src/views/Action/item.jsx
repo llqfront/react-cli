@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 
 import {connect} from 'react-redux';
 
-import { actions } from './_index.js';
+import {AddActions} from '@/stores/Actions.ts';
 
 class View extends Component {
     constructor(props){
@@ -22,7 +22,7 @@ class View extends Component {
 const mapDispatchToProps = (dispatch, ownProps) => {
     const { val } = ownProps;
 	return {
-		onRemoveFn: () => dispatch(actions.del('删除',val.id))
+		onRemoveFn: () => dispatch(AddActions.del('删除',val.id))
 	}
 };
 
