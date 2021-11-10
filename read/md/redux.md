@@ -1,3 +1,8 @@
-yarn add react-redux redux
+yarn add @types/react-redux react-redux redux redux-thunk
 
-yarn add @types/react-redux
+目录创建 未完成
+1、servers
+2、epics
+3、helpers
+4、untils
+5、enums
