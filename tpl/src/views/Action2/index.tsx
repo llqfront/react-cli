@@ -6,7 +6,10 @@ const View = (props)=>{
     const add = useSelector((state)=>state.addReducer);
     const dispatch = useDispatch();
     useEffect(()=>{
-        // dispatch(actionsAdd.add())
+        dispatch(actionsAdd.newAdd(
+            'test',
+            {name:'1',age:32}
+        ))
         // dispatch({
         //     type:"ADD_TODO"
         // })

@@ -4,7 +4,7 @@ import {NavLink,Redirect,Switch,Route} from 'react-router-dom';
 const Home = lazy(() => import('@/views/Home'));
 const Test = lazy(() => import('@/views/Test'));
 const Action = lazy(() => import('@/views/Action'));
-const Action2 = lazy(() => import('@/views/Action2'));
+const Action2 = lazy(() => import('@/views/Action2/index.tsx'));
 class Router extends Component {
     render(){
         return(

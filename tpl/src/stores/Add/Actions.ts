@@ -7,6 +7,23 @@ import * as ActionTypes from './ActionTypes';
 //     type:ActionTypes.ADD_TODO,
 //     text:'第一个demo'
 // }
+
+
+export const newAdd = <T>(
+    type:string,
+    payload?:T,
+    handleCallback?:(res:ResponseData)=>void,
+):T =>{
+    console.log(payload)
+    console.log(handleCallback)
+    return {
+        type,
+        payload:payload || {},
+        handleCallback
+    }
+}
+
+
 export const add = (_id) =>{
     return{
         type:ActionTypes.ADD_TODO,
