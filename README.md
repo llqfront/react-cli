@@ -12,8 +12,7 @@ rematch 分支为reamatch 结构代码 补充中...
 
 ## step1
 ```cmd
-eg:
-mv react-cli/tpl react-cli/projectName
+把demo 文件改成自己需要的项目名，然后移动。后期会维护一步创建.
 ```
 ##### step1-1
 ```cmd
