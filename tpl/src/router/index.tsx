@@ -3,6 +3,8 @@ import { lazy } from '@loadable/component';
 import {NavLink,Redirect,Switch,Route} from 'react-router-dom';
 const Home = lazy(() => import('@/views/Home'));
 const Test = lazy(() => import('@/views/Test'));
+const Event = lazy(() => import('@/views/Event/index.tsx'));
+const HookMobx = lazy(() => import('@/views/HookMobx/index.jsx'));
 class Router extends Component {
     render(){
         return(
@@ -10,7 +12,9 @@ class Router extends Component {
                 <Suspense fallback={<div>Loading...</div>}>
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route exact path="/test" component={Test} />
+                        <Route path="/test" component={Test} />
+                        <Route path="/event" component={Event} />
+                        <Route path="/hookmobx" component={HookMobx} />
                         <Redirect to="/"/>
                     </Switch>
                 </Suspense>
