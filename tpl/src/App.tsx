@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'mobx-react';
-import { observable, useStrict ,autorun} from 'mobx';
+import { observable, useStrict ,autorun,spy} from 'mobx';
 import { BrowserRouter, HashRouter} from 'react-router-dom';
 // const cnstore = new cnStore();
 import Router from '@/router/';
@@ -12,6 +12,11 @@ const stores = {
   test: new testStore(),
   // ...other stores
 };
+spy((event) => {
+    if (event.type === 'action') {
+        console.log(stores)
+    }
+})
 const App = () => (
     <BrowserRouter>
         <Provider {...stores}>

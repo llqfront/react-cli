@@ -4,7 +4,7 @@ class Store {
         'name':'sadf'
     };
     constructor(){
-        // makeObservable(this);
+        makeObservable(this);
     }
     @observable baseInfo = {};
     @observable callback = null;
@@ -23,6 +23,11 @@ class Store {
         this.tradeCfg = {
             'name':'1111'
         }
+    }
+    @action
+    setName = (text)=>{
+        console.log(text)
+        this.name = text;
     }
 }
 
