@@ -1,5 +1,9 @@
 # react-cli
-react-typescript-router-mobx-redux-hook
+react-typescript-router-mobx-redux-rematch-hook
+三大状态 分别对应类组件及函数组件
+redux
+mobx
+rematch
 ```html
 main 分支为 路由版本
 redux 分支为 redux 结构
