@@ -14,4 +14,11 @@ export const app = {
       this.increment(payload)
     }
   }
+  // effects:dispatch=>({
+  //     async incrementAsync(payload, rootState) {
+  //         await new Promise(resolve => setTimeout(resolve, 1000))
+  //         // dispatch({ type: 'count/incrementAsync', payload: 1 }) // state = { count: 3 } after delay
+  //         dispatch.app.increment(payload)
+  //       }
+  // })
 }
