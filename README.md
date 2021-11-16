@@ -1,5 +1,10 @@
 # react-cli
 react-typescript-router-mobx-redux-hook
+>嫌弃redux 繁琐
+那为何不用mobx 呢，随意，但又不失规范
+
+
+
 ```html
 main 分支为 路由版本
 redux 分支为 redux 结构
