@@ -4,6 +4,7 @@ import {NavLink,Redirect,Switch,Route} from 'react-router-dom';
 const Home = lazy(() => import('@/views/Home'));
 const Test = lazy(() => import('@/views/Test'));
 const Rematch = lazy(() => import('@/views/Rematch/index.tsx'));
+const Rematchfn = lazy(() => import('@/views/Rematchfn/index.tsx'));
 class Router extends Component {
     render(){
         return(
@@ -11,8 +12,9 @@ class Router extends Component {
                 <Suspense fallback={<div>Loading...</div>}>
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route exact path="/test" component={Test} />
-                        <Route exact path="/rematch" component={Rematch} />
+                        <Route path="/test" component={Test} />
+                        <Route path="/rematch" component={Rematch} />
+                        <Route path="/rematchfn" component={Rematchfn} />
                         <Redirect to="/"/>
                     </Switch>
                 </Suspense>
