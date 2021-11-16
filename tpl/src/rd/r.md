@@ -1,39 +1,44 @@
-1、安装
-2、导入
-    import { init, dispatch, getState } from '@rematch/core'
-3、const store = init()
-4、
+#### 安装
+```cmd
+    yarn add @rematch/core
+```
+#### 导入
+```tsx
+    react/react-cli/tpl/src/App.tsx
+    import {Provider} from 'react-redux';
+    import {store} from '@/core/';
+    <Provider store={store}>
+    </Provider>
 
+    import React from 'react';
 
+    import { BrowserRouter, HashRouter} from 'react-router-dom';
+    import {Provider} from 'react-redux';
+    import Router from '@/router/';
+    import {store} from '@/core/';
 
-import { init, dispatch, getState } from '@rematch/core'
-import { models , RootModel} from '@/models';
-import immerPlugin from '@rematch/immer';
+    const App = () => (
+        <BrowserRouter>
+            <Provider store={store}>
+                <Router/>
+            </Provider>
+        </BrowserRouter>
+    )
+    export default App;
+```
+#### init store
+```ts
+react/react-cli/tpl/src/core/index.ts
+```
+#### model
+```ts
+react/react-cli/tpl/src/models/index.ts
+```
 
-export const store = init({
-  models,
-  plugins:[immerPlugin()]
-})
-export type Store = typeof store;
-export type RootState = RematchRootState<RootModel>
-export type Dispatch = RematchDispatch<RootModel>
-// export const getState = store.getState as ()=>RootState
-// export const dispatch = store.dispatch as Dispatch
-export {dispatch,getState}
-// export default store;
-
-//models /index.ts
-import { Models } from '@rematch/core'
-
-import { app } from './app.model.ts';
-// import { app } from './app.model.ts';
-
-export interface RootModel extends Models<RootModel>{
-    app:typeof app
-    // auth:typeof auth
-}
-
-export const models:RootModel = {
-    app,
-    // auth
-}
+#### view 页面
+```tsx
+类组件
+react/react-cli/tpl/src/views/Rematch/index.tsx
+函数组件
+react/react-cli/tpl/src/views/Rematchfn/index.tsx
+```

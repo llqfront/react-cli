@@ -1,35 +1,51 @@
 # react-cli
 react-typescript-router-mobx-redux-hook
+```html
+main 分支为 路由版本
+redux 分支为 redux 结构
+mobx 分支为 mobx 结构代码
+rematch 分支为reamatch 结构代码
+整体在维护中
+```
+> 切换到分支 rematch 可以看到完整rematch 搭建的代码
+react/react-cli/tpl/src/rd/r.md
 
-#### step1
+
+## step1
 ```cmd
-    eg:
-    mv react-cli/tpl react-cli/projectName
-    eg
-    cd react-cli
-    改名
-    mv tpl candy-react
-    移动
-    mv tpl ../
-    cd ..
-    rm -rf react-cli
+把demo 文件改成自己需要的项目名，然后移动。后期会维护一步创建.
+```
+##### step1-1
+```cmd
+进入文件夹:
+cd react-cli
+```
+##### step1-2
+```cmd
+改名
+mv tpl candy-react
+```
+##### step1-3
+```cmd
+移动到上一级
+mv tpl ../
+```
+##### step1-4
+```cmd
+退出当前文件夹
+cd ..
+rm -rf react-cli
+```
+## step2
+```cmd
+node -v
+v14.15.3
+yarn config get registry
+yarn config set registry http://registry.npm.taobao.org/
 ```
 
-#### step2
-
+## step3
 ```cmd
-    node -v
-    v14.15.3
-    yarn config get registry
-    yarn config set registry http://registry.npm.taobao.org/
+yarn
+yarn start
 ```
-
-#### step3
-```cmd
-    yarn
-    yarn start
-```
-
-
-#### ps
-> 切换到分支 redux 可以看到完整redux 搭建的代码
