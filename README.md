@@ -1,5 +1,6 @@
 # react-cli
-react-typescript-router-mobx-redux-rematch-hook
+react-typescript-router-mobx-redux-rematch- & - hook
+支持tsx以及jsx
 三大状态 分别对应类组件及函数组件
 redux
 mobx
@@ -7,9 +8,8 @@ rematch
 ```html
 main 分支为 路由版本
 redux 分支为 redux 结构
-mobx 分支为 mobx 结构代码 补充中...
-rematch 分支为reamatch 结构代码 补充中...
-整体在维护中
+mobx 分支为 mobx 结构代码
+rematch 分支为reamatch 结构代码
 ```
 > 切换到分支 redux 可以看到完整redux 搭建的代码
 
