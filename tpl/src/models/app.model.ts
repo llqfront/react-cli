@@ -1,4 +1,4 @@
-export const count = {
+export const app = {
   state: 0, // initial state
   reducers: {
     // handle state changes with pure functions
