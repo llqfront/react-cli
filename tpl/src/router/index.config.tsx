@@ -20,6 +20,21 @@ const pageRouters:Array<any> = [
         exact:false,
         component:lazy(() => import('@/views/Test')),
     },
+    {
+        path:'/test',
+        exact:false,
+        component:lazy(() => import('@/views/Test')),
+    },
+    {
+        path:'/web',
+        exact:true,
+        component:lazy(() => import('@/views/Test')),
+    },
+    {
+        path:'/web/:id',
+        exact:false,
+        component:lazy(() => import('@/views/Test')),
+    },
 ];
 // 用户中心路由
 const userRouters:Array<any> = [
