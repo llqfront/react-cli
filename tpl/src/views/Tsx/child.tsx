@@ -3,13 +3,15 @@ import React, { PureComponent,Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
 interface Props {
-    title?: string
+    title?: string,
 }
 
 class View extends PureComponent<Props,{}>{
 
     public render(){
         console.log(this.props.match)
+        const { match } = this.props;
+        console.log(match)
         return(
             <div>
                 子组件
