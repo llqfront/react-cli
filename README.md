@@ -27,6 +27,7 @@ rematch 分支为reamatch 结构代码
     ```HTML
       git clone -b redux git@...     增加-b 后面是具体分支名，可直接clone 出具体分支
      ```
+ - 路由首页出现城市动态 在rematch分支
 
 ## step1
 ```cmd
