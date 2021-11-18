@@ -13,6 +13,20 @@ rematch 分支为reamatch 结构代码
 ```
 > 切换到分支 redux 可以看到完整redux 搭建的代码
 
+##### 更新日志
+ - 路由版本 为main分支
+ - redux 版本 为 redux分支
+ - mobx 版本 为redux分支
+ - rematch 版本为 reumatch 分支
+ - App.ts 与 Router.ts 互换，各分支都已改变
+ - main 分支为基础分支 ，其他都分支均为main clone 出来的
+ - 别名 各分支也均实现
+ - tsx demo 在rematch 分支上
+ - redux 分支目前内容更新为最多代码
+ - 如果明确使用哪个状态可直接clone
+    ```HTML
+      git clone -b redux git@...     增加-b 后面是具体分支名，可直接clone 出具体分支
+     ```
 
 ## step1
 ```cmd
