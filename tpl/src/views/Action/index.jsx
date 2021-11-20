@@ -12,7 +12,6 @@ class View extends Component {
         const {addList,onAddFn} = this.props;
         return (
             <React.Fragment>
-                {addList.length}<br/>
                 action页面<br/>
                 {/*<input type="button"
                 value="点我"

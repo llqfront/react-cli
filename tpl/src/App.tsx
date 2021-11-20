@@ -5,12 +5,12 @@ import { BrowserRouter, HashRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 
 
-import RootStore from '@/stores';
+import getStore from '@/stores';
 import Router from '@/router';
 
 const App = () => (
     <BrowserRouter>
-        <Provider store={RootStore}>
+        <Provider store={getStore()}>
             <Router/>
         </Provider>
     </BrowserRouter>
