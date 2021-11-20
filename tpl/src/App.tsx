@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 
 
 import RootStore from '@/stores';
-import Router from '@/router/';
+import Router from '@/router';
 
 const App = () => (
     <BrowserRouter>

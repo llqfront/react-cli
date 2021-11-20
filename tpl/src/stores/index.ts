@@ -3,22 +3,26 @@ import { createStore , applyMiddleware } from 'redux';
 import rootEpic from '@/epics';
 import rootReducer from '@/reducers';
 
+import { merge } from 'lodash';
+
 import { createEpicMiddleware } from 'redux-observable';
 
 
-
-const configureStore = ()=> {
-
+const configureStore = (preStore)=> {
     const epicMiddleware = createEpicMiddleware();
-
-    const newStore = createStore(
+    const store = createStore(
         rootReducer,
+        preStore,
         applyMiddleware(epicMiddleware)
     );
-
     epicMiddleware.run(rootEpic);
+    return store;
+}
+let store = configureStore();
 
+const getStore = (preStore?) =>{
+    store = configureStore(merge(store.getState(),preStore));
     return store;
 }
 
-export default configureStore;
+export default getStore;

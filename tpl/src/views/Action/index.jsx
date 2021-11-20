@@ -1,7 +1,7 @@
 import React , { Component } from 'react';
 import {connect} from 'react-redux';
 
-import {actionsAdd} from '@/stores/Actions.ts';
+import {actionAdd} from '@/actions';
 
 class View extends Component {
     // changeName(){
@@ -34,7 +34,7 @@ function mapStateToProps(state) {
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onAddFn:()=>dispatch(actionsAdd.add())
+        onAddFn:()=>dispatch(actionAdd.add())
     }
 };
 export default connect(mapStateToProps,mapDispatchToProps)(View);
