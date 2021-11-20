@@ -12,5 +12,4 @@ const rootEpic = combineEpics(
      ...distructor(addPageEpic),
      // ...distructor(testPageEpic),
 );
-
 export default rootEpic;

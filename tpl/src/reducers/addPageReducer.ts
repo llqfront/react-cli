@@ -1,21 +1,15 @@
 const ADD_TODO = 'ADD_TODO';
 const DEL_TODO = 'DEL_TODO';
 const EDIT_TODO = 'EDIT_TODO';
-export default (state=[],action)=>{
+export default (state = {},action)=>{
     switch (action.type) {
         case ADD_TODO:
-            return [
-                {
-                    type:action.type,
-                    text:action.text,
-                    id:action.id
-                },
-                ...state
-            ]
+            return {
+                ...state,
+                ...action
+            }
         case DEL_TODO:
-            return state.filter((item)=>{
-                return item.id !== action.id;
-            })
+            return state
         default:
             return state;
     }

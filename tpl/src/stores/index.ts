@@ -19,7 +19,6 @@ const configureStore = (preStore)=> {
     return store;
 }
 let store = configureStore();
-
 const getStore = (preStore?) =>{
     store = configureStore(merge(store.getState(),preStore));
     return store;

@@ -7,9 +7,14 @@ class View extends Component {
     // changeName(){
     //
     // }
+    onAddFn = ()=>{
+        const {dispatch} = this.props;
+        dispatch(actionAdd.add(
+            'app/testAdd'
+        ))
+    }
     render(){
-        console.log(this.props.addList)
-        const {addList,onAddFn} = this.props;
+        const {addList} = this.props;
         return (
             <React.Fragment>
                 action页面<br/>
@@ -19,7 +24,7 @@ class View extends Component {
                 />*/}
                 <input type="button"
                 value="点我"
-                onClick={()=>{onAddFn()}}
+                onClick={this.onAddFn}
                 />
             </React.Fragment>
         )
@@ -31,9 +36,9 @@ function mapStateToProps(state) {
         addList:state.addReducer
     }
 }
-const mapDispatchToProps = (dispatch, ownProps) => {
-    return {
-        onAddFn:()=>dispatch(actionAdd.add())
-    }
-};
-export default connect(mapStateToProps,mapDispatchToProps)(View);
+// const mapDispatchToProps = (dispatch, ownProps) => {
+//     return {
+//         onAddFn:()=>dispatch(actionAdd.add())
+//     }
+// };
+export default connect(mapStateToProps,null)(View);

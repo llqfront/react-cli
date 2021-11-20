@@ -9,5 +9,4 @@ const rootReducer = combineReducers({
     // remove:removeReducer,
     // edit:editReducer,
 })
-
 export default rootReducer;
