@@ -1,5 +1,3 @@
-import * as ActionTypes from './ActionTypes';
-
 export default (state=[],action)=>{
     switch (action.type) {
         case ActionTypes.ADD_TODO:
@@ -18,5 +16,4 @@ export default (state=[],action)=>{
         default:
             return state;
     }
-
 }

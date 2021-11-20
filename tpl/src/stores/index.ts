@@ -1,22 +1,24 @@
-import {createStore, combineReducers,applyMiddleware} from 'redux';
-import thunk from 'redux-thunk';
-import addReducer from '@/stores/Add/Reducer.js';
-// import {reducer as testReducer} from '@/Test/Reducer.js';
-// import {reducer as delReducer} from '@/Del/Reducer.js';
-const reducer = combineReducers({
-    addReducer,
-    // testReducer,
-    // delReducer
-    // testList:testReducer,
-    // remove:removeReducer,
-    // edit:editReducer,
-})
+import { createStore , applyMiddleware } from 'redux';
 
-function newJson(str){
-    var json = (new Function("return " + str))();
-    return json;
+import rootEpic from '@/epics';
+import rootReducer from '@/reducers';
+
+import { createEpicMiddleware } from 'redux-observable';
+
+
+
+const configureStore = ()=> {
+
+    const epicMiddleware = createEpicMiddleware();
+
+    const newStore = createStore(
+        rootReducer,
+        applyMiddleware(epicMiddleware)
+    );
+
+    epicMiddleware.run(rootEpic);
+
+    return store;
 }
-export default createStore(reducer,
-    newJson(localStorage.getItem("LJMRoot"))||{},
-    applyMiddleware(thunk)
-);
+
+export default configureStore;
