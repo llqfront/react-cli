@@ -2,7 +2,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 module.exports = function(app) {
     app.use(
       '/home',createProxyMiddleware({
-        target: 'https://####.com/',
+        target: 'https://home-api.pinduoduo.com/',
         changeOrigin: true,
       })
     );

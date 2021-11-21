@@ -1,13 +1,13 @@
 import axios from 'axios';
 import qs from 'qs';
 const Unit = {
-    async getApi(ajaxCfg){
+    async getApi(url,cfg,headers){
         let data = await axios.get(
-        ajaxCfg.url,{
-            params:ajaxCfg.cfg
+        url,{
+            params:cfg
         },
         {
-            headers: ajaxCfg.headers,
+            headers: headers,
         })
         return data;
     },
@@ -74,4 +74,4 @@ const Unit = {
        return data;
    }
 }
-export default ajax;
+export default Unit;

@@ -11,9 +11,11 @@ class View extends Component {
     onAddFn = ()=>{
         const {dispatch} = this.props;
         dispatch(helpers.createAction(
-                actionAdd.ADD_TODO
-            ))
-
+            actionAdd.ADD_TODO
+        ))
+        // dispatch(helpers.createAction(
+        //     'app/testAdd'
+        // ))
     }
     render(){
         const {addList} = this.props;
@@ -33,7 +35,6 @@ class View extends Component {
     }
 }
 const mapStateToProps = (state)=> {
-    console.log(state)
     return {
         addList:state.add.payload
     }
