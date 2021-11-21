@@ -1,6 +1,7 @@
-import * as addPageEpic from '@/epics/addPageEpic';
-
 import { combineEpics } from 'redux-observable';
+import * as addPageEpic from './addPageEpic';
+
+
 
 function distructor(obj){
     return Object.keys(obj).map((item,index)=>{

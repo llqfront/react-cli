@@ -1,7 +1,8 @@
 import React , { Component } from 'react';
 import {connect} from 'react-redux';
 
-import {actionAdd} from '@/actions';
+import { helpers } from '@/utils';
+import { actionAdd } from '@/actions';
 
 class View extends Component {
     // changeName(){
@@ -9,9 +10,10 @@ class View extends Component {
     // }
     onAddFn = ()=>{
         const {dispatch} = this.props;
-        dispatch(actionAdd.add(
-            'app/testAdd'
-        ))
+        dispatch(helpers.createAction(
+                actionAdd.ADD_TODO
+            ))
+
     }
     render(){
         const {addList} = this.props;
@@ -30,10 +32,10 @@ class View extends Component {
         )
     }
 }
-function mapStateToProps(state) {
+const mapStateToProps = (state)=> {
     console.log(state)
     return {
-        addList:state.addReducer
+        addList:state.add.payload
     }
 }
 // const mapDispatchToProps = (dispatch, ownProps) => {

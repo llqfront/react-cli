@@ -1,15 +1,13 @@
-const ADD_TODO = 'ADD_TODO';
-const DEL_TODO = 'DEL_TODO';
-const EDIT_TODO = 'EDIT_TODO';
+import { actionAdd } from '@/actions';
+
+
 export default (state = {},action)=>{
     switch (action.type) {
-        case ADD_TODO:
+        case actionAdd.ADD_TODO:
             return {
                 ...state,
                 ...action
             }
-        case DEL_TODO:
-            return state
         default:
             return state;
     }
