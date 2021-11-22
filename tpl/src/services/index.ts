@@ -1,5 +1,5 @@
-import * as loginApi from '@/services/loginService.ts';
+import * as pddApi from './pddService.ts';
 
 export {
-    loginApi,
+    pddApi,
 }
