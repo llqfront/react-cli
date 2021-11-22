@@ -1,12 +1,9 @@
 import { combineReducers } from 'redux';
-import add from './addPageReducer';
+import addReducer from './addPageReducer';
+import oldReducer from './oldPageReducer';
 
 const rootReducer = combineReducers({
-    add,
-    // testReducer,
-    // delReducer
-    // testList:testReducer,
-    // remove:removeReducer,
-    // edit:editReducer,
+    addReducer,
+    oldReducer
 })
 export default rootReducer;
