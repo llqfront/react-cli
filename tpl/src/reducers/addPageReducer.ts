@@ -6,8 +6,7 @@ export default (state = {},action)=>{
       case actionAdd.FETCH_USER_FULFILLED:
         return {
           ...state,
-          // `login` is the username
-          [action.payload.login]: action.payload
+          success:action.payload
         };
       default:
         return state;

@@ -1,15 +1,15 @@
 import { Epic,ofType } from 'redux-observable';
 
-import { endWith, map, mergeMap, startWidth, switchMa,filter, mapTo } from 'rxjs/operators';
+import { endWith, map, mergeMap, startWidth, switchMap } from 'rxjs/operators';
 
 import { ajax } from 'rxjs/ajax';
 
 import { actionAdd } from '@/actions';
 import { helpers } from '@/utils';
 
-export const testAdd = (action$, state$) => {
+export const fetchUserEpic = (action$, state$) => {
     return action$.pipe(
-        // 第一个解法器
+        // 第一个解释器
         ofType(actionAdd.FETCH_USER),
         mergeMap((action) =>{
             return ajax({
@@ -17,10 +17,11 @@ export const testAdd = (action$, state$) => {
               method: 'GET',
               headers: {
               }
-          }).pipe(
-              map(res => {
+            }).pipe(map(res => {
+                  console.log(res.response)
                   // 真下的ajax 请求后的结果
-                  helpers.createAction(actionAdd.FETCH_USER_FULFILLED,res.response)
+                  // 一定要return 
+                  return helpers.createAction(actionAdd.FETCH_USER_FULFILLED,res.response)
               })
             )
         })
