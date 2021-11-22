@@ -1174,7 +1174,7 @@
 
 "@babel/runtime@^7.15.4":
   version "7.16.3"
-  resolved "https://registry.npmmirror.com/@babel/runtime/download/@babel/runtime-7.16.3.tgz?cache=0&sync_timestamp=1636494819594&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
+  resolved "https://registry.npmmirror.com/@babel/runtime/download/@babel/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
   integrity sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==
   dependencies:
     regenerator-runtime "^0.13.4"
@@ -9514,11 +9514,6 @@ redux-observable@^2.0.0:
   dependencies:
     rxjs "^7.0.0"
     tslib "~2.1.0"
-
-redux-thunk@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.npmmirror.com/redux-thunk/download/redux-thunk-2.4.0.tgz?cache=0&sync_timestamp=1635214108732&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fredux-thunk%2Fdownload%2Fredux-thunk-2.4.0.tgz#ac89e1d6b9bdb9ee49ce69a69071be41bbd82d67"
-  integrity sha1-rInh1rm9ue5JzmmmkHG+QbvYLWc=
 
 redux@^4.0.0, redux@^4.1.2:
   version "4.1.2"

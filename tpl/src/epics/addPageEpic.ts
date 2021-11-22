@@ -1,35 +1,28 @@
 import { Epic,ofType } from 'redux-observable';
 
-import { endWith, map, mergeMap, startWidth, switchMap } from 'rxjs/operators';
-import unit from '@/utils/ajax.ts';
+import { endWith, map, mergeMap, startWidth, switchMa,filter, mapTo } from 'rxjs/operators';
+
+import { ajax } from 'rxjs/ajax';
 
 import { actionAdd } from '@/actions';
-import axios from 'axios';
+import { helpers } from '@/utils';
 
 export const testAdd = (action$, state$) => {
     return action$.pipe(
-        ofType('app/testAdd'),
+        // 第一个解法器
+        ofType(actionAdd.FETCH_USER),
         mergeMap((action) =>{
-          // epic(action$, state$))
-          // console.log(action)
-          // return axios.get(
-          // '/home/mediareports',
-          // {
-          //     params:{
-          //         page_number:1,
-          //         page_size:20
-          //     }
-          // },
-          // {
-          //     headers: {},
-          // }).pipe(
-          //     map((res)=>{
-          //         console.log(res)
-          //     })
-          // )
-          return action;
-
+            return ajax({
+              url: '/home/mediareports?page_number=1&page_size=20',
+              method: 'GET',
+              headers: {
+              }
+          }).pipe(
+              map(res => {
+                  // 真下的ajax 请求后的结果
+                  helpers.createAction(actionAdd.FETCH_USER_FULFILLED,res.response)
+              })
+            )
         })
-      // mergeMap(epic => epic(action$, state$))
     );
 }

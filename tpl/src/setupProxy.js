@@ -6,10 +6,4 @@ module.exports = function(app) {
         changeOrigin: true,
       })
     );
-    app.use(
-      '/api',createProxyMiddleware({
-        target: 'http://####.cn/',
-        changeOrigin: true,
-      })
-    );
 };
