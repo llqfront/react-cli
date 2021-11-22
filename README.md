@@ -7,8 +7,11 @@ mobx 分支为 mobx 结构代码 补充中...
 rematch 分支为reamatch 结构代码 补充中...
 整体在维护中
 ```
-> 切换到分支 redux 可以看到完整redux 搭建的代码
-
+> 切换到分支 epic 可以看到完整epic 搭建的代码
+没有用官方的thunK 来处理异步
+用的epic(redux-observable)
+外加rxjs
+[redux-observable](https://redux-observable.js.org/docs/basics/Epics.html)
 
 ## step1
 ```cmd
