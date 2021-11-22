@@ -8,7 +8,7 @@ import Router from '@/router';
 
 const unsubscribe = RootStore().subscribe(() =>{
   // console.log(Store.getState())
-  localStorage.setItem("LJMRoot", JSON.stringify(RootStore.getState()));
+  localStorage.setItem("LJMRoot", JSON.stringify(RootStore().getState()));
 })
 //
 function newJson(str){

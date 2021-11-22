@@ -74,4 +74,4 @@ const Unit = {
        return data;
    }
 }
-export default ajax;
+export default Unit;
