@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
-import App from './App';
+import Router from './Router';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.hydrateRoot(
-  document.getElementById('root') as HTMLElement,
+// ReactDOM.createRoot(
+//   document.getElementById('root') as HTMLElement,
+//   <React.StrictMode>
+//     <Router />
+//   </React.StrictMode>
+// );
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+root.render(
   <React.StrictMode>
-    <App />
+    <Router />
   </React.StrictMode>
 );
 
