@@ -5,8 +5,8 @@ import { BrowserRouter, HashRouter} from 'react-router-dom';
 import App from './App';
 
 const Router = () => (
-    <BrowserRouter>
+    <HashRouter>
         <App/>
-    </BrowserRouter>
+    </HashRouter>
 )
 export default Router;
