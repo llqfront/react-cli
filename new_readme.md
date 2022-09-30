@@ -149,7 +149,9 @@ vue react 前端模拟路由  上线后其他页面刷新后404
 接上文，搭建路由，在企业中基本都是两个及以上的页面。
 所以路由是必需的
 ```
+
 ##### yarn build 打包注意事项
+
 ```html
 新建一个.env文件与package.json 同在根目录下
 GENERATE_SOURCEMAP=false
